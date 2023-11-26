@@ -10,7 +10,7 @@ const isPrime = (num) => {
 const getPrime = (number) => {
     let primeArray = [];
     for (let i = 2; i <= number; i++) {
-        if (isPrime(i) == true) primeArray.push(i);
+        if (isPrime(i)) primeArray.push(i);
     }
     console.log(primeArray);
 }
