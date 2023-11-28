@@ -1,38 +1,31 @@
 // Sayı bulma oyunu
-// 1 ile 10 arasında üretilen random sayıyı bulmak için 3 hakkınız var 
-// givenNumber = prompt(`Lütfen 1 ile 10 arasında(10 dahil) bir sayı giriniz. Unutmayın 3 Hakkınız var!`)
+// 1 ile 100 arasında üretilen random sayıyı bulmak için 10 hakkınız var
+// 100 üzerinden değerlendirilen bu oyunda her yanlış cevabınızda 10 puanınız gidecek.
 const findNumber = () => {
     let status = true;
-    let attempts = 3;
-    let randomNumber = Math.ceil(Math.random() * 10);
-    // for (let i = 0; i < 3; i++) {
-    //     givenNumber = prompt(`Lütfen 1 ile 10 arasında(10 dahil) bir sayı giriniz. Unutmayın ${attempts} Hakkınız var!`)
-    //     if(givenNumber == randomNumber){
-    //         console.log(`Tebrikler!!! Tuttuğum sayı: ${randomNumber} `)
-    //     }else{
-    //         clg
-    //     }
-    // }
-    console.log(randomNumber);
+    let attempts = 9;
+    let points = 100;
+    let randomNumber = Math.ceil(Math.random() * 100);
+    console.log(randomNumber); // Doğru cevabın kontrolünü yapabilmek için ufak bir hile
     while (status) {
-        givenNumber = prompt(`Lütfen 1 ile 10 arasında(10 dahil) bir sayı giriniz. Unutmayın ${attempts} Hakkınız var!`);
-        if (givenNumber == randomNumber && attempts != 0) {
-            console.log(`Tebrikler!!! Tuttuğum sayı: ${randomNumber} `);
+        givenNumber = prompt(`1 ile 100 arasında(100 dahil) bir sayı tuttum.Lütfen tahmininizi giriniz.100 üzerinden değerlendirilen bu oyunda her yanlış cevabınızda 10 puanınız gidecek. Unutmayın ${attempts + 1} Hakkınız var!`);
+        if (givenNumber == randomNumber) {
+            alert(`Tebrikler!!!
+            Tuttuğum sayı: ${randomNumber}
+            Puanınız ${points}`);
             status = false;
         } else if (attempts == 0) {
-            console.log('Üzgünüm hakkınız bitti :(');
+            alert('Üzgünüm hakkınız bitti :(');
             break;
         } else {
             if (givenNumber < randomNumber) {
-                console.log(`Yanlış cevap ${attempts - 1} adet hakkınız kaldı.Daha büyük bir sayı dene.`);
+                alert(`Tüh, yanlış cevap. Daha büyük bir sayı dene. ${attempts} adet hakkınız ve '${points}' puanınız kaldı.`);
             } else {
-                console.log(`Yanlış cevap ${attempts - 1} adet hakkınız kaldı.Daha küçük bir sayı dene.`);
-
+                alert(`Tüh, yanlış cevap. Daha küçük bir sayı dene. ${attempts} adet hakkınız ve '${points}' puanınız kaldı.`);
             }
             attempts--;
+            points -= 10;
         };
     };
 };
 findNumber();
-// let randomNumber = Math.ceil((Math.random() * 10));
-// console.log(randomNumber)
