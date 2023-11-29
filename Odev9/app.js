@@ -5,6 +5,7 @@ console.log('dizi ' + fruits.length + ' elemanlıdır.');
 
 // 3 - Dizinin ilk ve son elemanı nedir ?
 console.log(fruits[fruits.length - 1]);
+console.log(fruits[0]);
 
 // 4 - Elma dizinin bir elemanımıdır ?
 if (fruits.includes("Elma")) console.log("Evet, Elma bu dizinin bir elemanıdır.");
