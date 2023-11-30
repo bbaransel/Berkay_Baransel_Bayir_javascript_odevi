@@ -31,5 +31,6 @@ urlArray.push("/");
 let newUrl = urlArray.join("");
 dersAdiArray = dersAdi.toLowerCase().split(" ");
 dersAdiArray[dersAdiArray.indexOf("developer")] = "gelistirme"
+dersAdiArray[dersAdiArray.indexOf("eğitimi")] = "egitimi"
 let newDersAdi = dersAdiArray.join("-");
 console.log(newUrl + newDersAdi);
