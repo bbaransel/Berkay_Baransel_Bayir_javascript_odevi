@@ -19,9 +19,9 @@ const findNumber = () => {
             break;
         } else {
             if (givenNumber < randomNumber) {
-                alert(`Tüh, yanlış cevap. Daha büyük bir sayı dene. ${attempts} adet hakkınız ve '${points}' puanınız kaldı.`);
+                alert(`Tüh, yanlış cevap. Daha büyük bir sayı dene. ${attempts} adet hakkınız ve '${points - 10}' puanınız kaldı.`);
             } else {
-                alert(`Tüh, yanlış cevap. Daha küçük bir sayı dene. ${attempts} adet hakkınız ve '${points}' puanınız kaldı.`);
+                alert(`Tüh, yanlış cevap. Daha küçük bir sayı dene. ${attempts} adet hakkınız ve '${points - 10}' puanınız kaldı.`);
             }
             attempts--;
             points -= 10;
